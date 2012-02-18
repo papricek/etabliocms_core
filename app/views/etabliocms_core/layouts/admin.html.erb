@@ -1,0 +1,95 @@
+<!doctype html>
+<!--[if lt IE 7 ]>
+<html class="ie ie6" lang="cs"> <![endif]-->
+<!--[if IE 7 ]>
+<html class="ie ie7" lang="cs"> <![endif]-->
+<!--[if IE 8 ]>
+<html class="ie ie8" lang="cs"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="cs"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Language" content="cs"/>
+  <meta name="description" content="<%= yield :title %> – <%= configatron.title %>"/>
+
+  <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=<%= configatron.google_maps_api_key %>" type="text/javascript"></script>
+  <title><%= yield :title %> | <%= t('admin.admin') %> <%= configatron.title %></title>
+  <%= stylesheet_link_tag "admin-all" %>
+  <%= javascript_include_tag "admin-all" %>
+  <%= csrf_meta_tags %>
+</head>
+
+
+<body class="<%= body_class %>">
+
+<header id="topbar">
+  <div class="container">
+    <nav id="user-information">
+      <% if user_signed_in? -%>
+          <strong><%= t('common.logged') %>: <%= link_to current_user.email, admin_path %></strong>
+          <ul>
+            <li><%= link_to t('common.logout'), destroy_user_session_path, {:title => t('common.logout'), :method => :delete} %></li>
+          </ul>
+      <% end -%>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+  <div id="main">
+    <div id="content">
+
+      <%= render "layouts/flashes" %>
+
+      <%= yield %>
+
+    </div>
+
+    <nav id="sidebar">
+      <div id="sidebar-inner">
+        <div id="sidebar-inner-inner">
+
+          <h3><%= image_tag asset_path("admin/sidebar-pages.png"), :alt => t('page.pages') %><%= t('page.pages') %></h3>
+          <ul>
+            <li><%= link_to_unless_current I18n.t('page.pages_count', :count => Page.count), admin_pages_path %></li>
+            <li><%= link_to_unless_current t('page.add'), new_admin_page_path %></li>
+          </ul>
+
+          <h3><%= image_tag asset_path("admin/sidebar-categories.png"), :alt => t('category.categories') %><%= t('category.categories') %></h3>
+          <ul>
+            <li><%= link_to_unless_current I18n.t('category.categories_count', :count => Category.count), admin_categories_path %></li>
+            <li><%= link_to_unless_current t('category.add'), new_admin_category_path %></li>
+          </ul>
+
+          <h3><%= image_tag asset_path("admin/sidebar-products.png"), :alt => t('product.products') %><%= t('product.products') %></h3>
+          <ul>
+            <li><%= link_to_unless_current I18n.t('product.products_count', :count => Product.count), admin_products_path %></li>
+            <li><%= link_to_unless_current t('product.add'), new_admin_product_path %></li>
+          </ul>
+
+          <h3><%= image_tag asset_path("admin/sidebar-users.png"), :alt => t('user.users') %><%= t('user.users') %></h3>
+          <ul>
+            <li><%= link_to_unless_current I18n.t('user.users_count', :count => User.count), admin_users_path %></li>
+            <li><%= link_to_unless_current t('user.add'), new_admin_user_path %></li>
+          </ul>
+
+
+        </div>
+      </div>
+    </nav>
+
+  </div>
+</div>
+
+
+<script>
+    $(function() {
+        Shared.initFlashClose();
+        Admin.initPopUp();
+    })
+</script>
+
+<%= yield :javascript %>
+
+</body>
+</html>

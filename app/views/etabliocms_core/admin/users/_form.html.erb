@@ -1,0 +1,25 @@
+<fieldset>
+  <legend><%= t('user.admin_legend') %></legend>
+
+  <%= render "layouts/errors", :target => @user %>
+
+  <p>
+    <%= f.label :email %>
+    <%= f.text_field :email, :class => 'text-field' %>
+  </p>
+
+  <p>
+    <%= f.label :password %>
+    <%= f.password_field :password, :class => 'text-field' %>
+  </p>
+
+  <p>
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation, :class => 'text-field' %>
+  </p>
+
+  <p>
+    <%= submit_tag t('admin.save'), :class => 'submit' %>
+  </p>
+
+</fieldset>

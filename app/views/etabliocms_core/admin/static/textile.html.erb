@@ -1,0 +1,250 @@
+<% set_title_and_breadcrumb "Nápověda k syntaxi Textile" %>
+
+<h1>Textile</h1>
+<p>Textile je značkovací jazyk, umožňující zapisovat HTML v textové formě, bez HTML značek.</p>
+
+<table id="textile-help">
+  <thead>
+  <tr class="dark-row">
+    <th>Objekt</th>
+    <th>Jak se zapisuje</th>
+    <th>Jak vypadá</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <th>Nadpis</th>
+    <td>h2. Nadpis</td>
+    <td><%= textilize("h2. Nadpis") %></td>
+  </tr>
+  <tr>
+    <th>Menší nadpis</th>
+    <td>h3. Nadpis</td>
+    <td><%= textilize("h3. Menší nadpis") %></td>
+  </tr>
+  <tr>
+    <th>Bloková citace</th>
+    <td>bq. <%= Lorem::Base.new('words', 19).output %></td>
+    <td><%= textilize("bq. #{Lorem::Base.new('words', 19).output}") %></td>
+  </tr>
+  <tr>
+    <th>Kurzíva</th>
+    <td>Lorem _ipsum dolor_ sit amet.</td>
+    <td><%= textilize("Lorem _ipsum dolor_ sit amet.") %></td>
+  </tr>
+  <tr>
+    <th>Tučné</th>
+    <td>Lorem *ipsum dolor* sit amet.</td>
+    <td><%= textilize("Lorem *ipsum dolor* sit amet.") %></td>
+  </tr>
+  <tr>
+    <th>Řádková citace</th>
+    <td>Lorem ??ipsum dolor?? sit amet.</td>
+    <td><%= textilize("Lorem ??ipsum dolor?? sit amet.") %></td>
+  </tr>
+  <tr>
+    <th>Horní index</th>
+    <td>Lorem ^ipsum^ dolor sit amet.</td>
+    <td><%= textilize("Lorem ^ipsum^ dolor sit amet.") %></td>
+  </tr>
+  <tr>
+    <th>Dolní index</th>
+    <td>Lorem ~ipsum~ dolor sit amet.</td>
+    <td><%= textilize("Lorem ~ipsum~ dolor sit amet.") %></td>
+  </tr>
+  <tr>
+    <th>Položka číselného seznamu</th>
+    <td># Lorem ipsum dolor sit amet.</td>
+    <td><%= textilize("# Lorem ipsum dolor sit amet.") %></td>
+  </tr>
+  <tr>
+    <th>Položka odrážkového seznamu</th>
+    <td>* Lorem ipsum dolor sit amet.</td>
+    <td><%= textilize("* Lorem ipsum dolor sit amet.") %></td>
+  </tr>
+  <tr>
+    <th>Odkaz</th>
+    <td>"Text odkazu":http://www.seznam.cz</td>
+    <td><%= textilize("\"Text odkazu\":http://www.seznam.cz") %></td>
+  </tr>
+  <tr>
+    <th>Odkaz v textu</th>
+    <td>Lorem "ipsum dolor":http://www.seznam.cz sit amet.</td>
+    <td><%= textilize("Lorem \"ipsum dolor\":http://www.seznam.cz sit amet.") %></td>
+  </tr>
+  <tr>
+    <th>Odkaz v textu s&nbsp;bublinkou</th>
+    <td>Lorem "ipsum dolor"(Text bublinky):http://www.seznam.cz sit amet.</td>
+    <td><%= textilize("Lorem \"ipsum dolor(Text bublinky)\":http://www.seznam.cz sit amet.") %></td>
+  </tr>
+  <tr>
+    <th>Obrázek s&nbsp;popiskem</th>
+    <td>!<%= "http://#{configatron.host}/images/mystic/box-heading-background.png" %>(Popisek obrázku)!</td>
+    <td><%= textilize("!/images/mystic/box-heading-background.png(Popisek obrázku)!") %></td>
+  </tr>
+  <tr>
+    <th>Obrázek s&nbsp;popiskem a&nbsp;odkazem</th>
+    <td>!<%= "http://#{configatron.host}/images/mystic/box-heading-background.png" %>(Popisek
+      obrázku)!:http://www.seznam.cz
+    </td>
+    <td><%= textilize("!/images/mystic/box-heading-background.png(Popisek obrázku)!:http://www.seznam.cz") %></td>
+  </tr>
+
+  <tr>
+    <th>Obrázek v textu s&nbsp;popiskem zarovnaný na střed</th>
+    <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <br/>
+      !(image-center)<%= "http://#{configatron.host}/images/mystic/box-heading-background.png" %>(Popisek obrázku)!<br/>
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+    </td>
+    <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  <%= textilize("!(image-center)/images/mystic/box-heading-background.png(Popisek obrázku)!
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. ") %></td>
+  </tr>
+  <tr>
+    <th>Obrázek v textu s&nbsp;popiskem plovoucí vlevo</th>
+    <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <br/>
+      !(image-left)<%= "http://#{configatron.host}/images/mystic/box-heading-background.png" %>(Popisek obrázku)!<br/>
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing
+      elit.
+    </td>
+    <td>Lorem ipsum dolor sit amet, consectetuer adipiscing
+      elit.  <%= textilize("!(image-left)/images/mystic/box-heading-background.png(Popisek obrázku)! Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.") %></td>
+  </tr>
+  <tr>
+    <th>Obrázek v textu s&nbsp;popiskem plovoucí vpravo</th>
+    <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <br/>
+      !(image-right)<%= "http://#{configatron.host}/images/mystic/box-heading-background.png" %>(Popisek obrázku)!<br/>
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing
+      elit.
+    </td>
+    <td>Lorem ipsum dolor sit amet, consectetuer adipiscing
+      elit.  <%= textilize("!(image-right)/images/mystic/box-heading-background.png(Popisek obrázku)! Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.") %></td>
+  </tr>
+  <tr>
+    <th>Obrázek s lightboxem</th>
+    <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <br/><br/>
+      fig. <%= "http://#{configatron.host}/images/mystic/box-heading-background.png" %>
+      | <%= "http://#{configatron.host}/images/mystic/logo.png" %> | Popisek obrázku <br/> <br/>
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing
+      elit.
+    </td>
+    <td>Lorem ipsum dolor sit amet, consectetuer adipiscing
+      elit.  <%= textilize("fig. /images/mystic/box-heading-background.png | /images/mystic/logo.png | Popisek obrázku") %>
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing
+      elit.
+    </td>
+  </tr>
+  
+  <tr>
+    <th>Ikonka</th>
+    <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <br/><br/>
+      icon. <%= "http://#{configatron.host}/images/mystic/box-heading-background.png" %>
+      | http://www.seznam.cz | Popisek ikonky <br/> <br/>
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing
+      elit.
+    </td>
+    <td>Lorem ipsum dolor sit amet, consectetuer adipiscing
+      elit.  <%= textilize("icon. /images/mystic/box-heading-background.png | http://www.seznam.cz | Popisek ikonky") %>
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing
+      elit.
+    </td>
+  </tr>
+  <tr>
+    <th>Ikonka se zalamovací čárou</th>
+    <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <br/><br/>
+      icon. <%= "http://#{configatron.host}/images/mystic/box-heading-background.png" %>
+      | http://www.seznam.cz | Popisek ikonky <br/>
+      cleaner. <br/>
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing
+      elit.
+    </td>
+    <td>Lorem ipsum dolor sit amet, consectetuer adipiscing
+      elit. <%= textilize("icon. /images/mystic/box-heading-background.png | http://www.seznam.cz | Popisek ikonky ") %>
+       <hr class="cleaner" />      
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing
+      elit.
+    </td>
+  </tr>
+  <tr>
+    <th>Google mapa</th>
+    <td><strong>Formát:</strong><br/><br/>
+      gmap. latitude | longitude | zoom | Popisek k mapě
+    <td><strong>Příklad:</strong><br/><br/>
+      gmap. 50.045542 | 14.446846 | 10 | Adresa v Praze
+    </td>
+  </tr>
+    <tr>
+    <th>Youtube video</th>
+    <td><strong>Formát:</strong><br/><br/>
+      youtube. kód | šířka | výška | Popisek videa
+    <td><strong>Příklad:</strong><br/><br/>
+      youtube. QKPwuJyC-4E | 300 | 210| Stacie Monroe
+    </td>
+  </tr>
+      <tr>
+    <th>Flash</th>
+    <td><strong>Formát:</strong><br/><br/>
+      flash. url | šířka | výška
+    <td><strong>Příklad:</strong><br/><br/>
+      flash. http://www.seznam.cz/flash.swf | 300 | 210
+    </td>
+  </tr>
+  <tr>
+    <th>Zarovnání odstavce do bloku</th>
+    <td>p(justify). Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</td>
+    <td><%= textilize("p(justify). Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.") %></td>
+  </tr>
+  <tr>
+    <th>Zarovnání odstavce napravo</th>
+    <td>p(right). Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</td>
+    <td><%= textilize("p(right). Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.") %></td>
+  </tr>
+  <tr>
+    <th>Komplexní příklad</th>
+    <td>h2. Lorem ipsum<br/>
+      Lorem ipsum dolor sit amet, *"consectetuer":http://www.seznam.cz* adipiscing elit. Lorem ipsum dolor sit amet,
+      consectetuer adipiscing elit. <br/>
+      * Lorem<br/>
+      * Ipsum<br/>
+      ** Lorem ipsum<br/>
+      ** Dolor sit amet<br/>
+      * dolor sit amet<br/>
+      !(image-center)<%= "http://#{configatron.host}/images/mystic/box-heading-background.png" %>(Popisek
+      obrázku)!:http://www.seznam.cz<br/>
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing
+      elit.
+    </td>
+    <td><%= textilize("h2. Lorem ipsum
+    
+        Lorem ipsum dolor sit amet, *\"consectetuer\":http://www.seznam.cz* adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+        * Lorem
+        * Ipsum
+        ** Lorem ipsum
+        ** Dolor sit amet
+        * dolor sit amet
+        !(image-center)/images/mystic/box-heading-background.png(Popisek obrázku)!:http://www.seznam.cz
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.") %></td>
+  </tr>
+
+
+  </tbody>
+
+</table>
+
+
+<p>Podrobnější informace naleznete například na oficiálních
+  stránkách <%= link_to "Textile", "http://www.textism.com/tools/textile/" %>.</p>
+
+<% content_for :javascript do %>
+    <%= javascript_include_tag "jquery.colorbox-min" %>
+
+    <script type="text/javascript">
+        var opts = {
+            current: "{current} z {total}",
+            previous: "předchozí",
+            next: "další",
+            close: "zavřít"
+        };
+        $("a[rel=text-gallery]").colorbox(opts);
+    </script>
+<% end %>
+

@@ -1,0 +1,7 @@
+<% set_title_and_breadcrumb t('user.new') %>
+
+<h1><%= t('user.new') %></h1>
+
+<%= form_for :user,  :url => admin_users_url, :html => {:method => :post, :id => "admin-form"} do |f| -%>
+  <%= render :partial => 'form', :locals => { :f => f } %>
+<% end  %>

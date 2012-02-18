@@ -1,0 +1,11 @@
+<div id="flash">
+  <%- flash.each do |name, msg| -%>
+      <%- if msg.is_a?(String) %>
+          <p class="<%= name %>">
+            <a href="" class="flash-close" title="Zavřít">
+              <img src="<%= asset_path "public/icon-close.png" %>" alt="<%= t('common.close') %>"/></a>
+            <%= msg %>
+          </p>
+      <%- end %>
+  <%- end -%>
+</div>

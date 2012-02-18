@@ -1,0 +1,39 @@
+<footer id="contact">
+  <div id="contact-inner">
+    <div id="contact-inner-inner">
+      <div id="map">
+        <div id="map-inner">
+        </div>
+      </div>
+      <p><%= t('contact.name') %></p>
+      <p><%= t('contact.street') %></p>
+      <p><%= t('contact.city') %></p>
+      <p></p>
+      <table>
+        <tr>
+          <th><%= t('contact.phone') %>:</th>
+          <td><%= t('contact.phone1') %>, <br/><%= t('contact.phone2') %></td>
+        </tr>
+        <tr>
+          <th><%= t('contact.email') %>:</th>
+          <td><a href="mailto:<%= configatron.email %>"><%= configatron.email %></a></td>
+        </tr>
+        <tr>
+          <th><%= t('contact.opened') %>:</th>
+          <td><%= t('contact.opening_time') %></td>
+        </tr>
+      </table>
+      <%= link_to t('contact.facebook'), configatron.facebook, :id => "fb-link" %>
+
+      <h3 class="centered"><%= t('contact.internet_prices') %></h3>
+
+      <p class="centered grey"><%= t('contact.internet_prices_text') %></p>
+    </div>
+  </div>
+</footer>
+
+<footer id="conclusion">
+  <p>
+    <%= Date.today.year %> &copy; <%= link_to configatron.title, root_url %> | <%= link_to t('common.login'), new_user_session_path %>
+  </p>
+</footer>

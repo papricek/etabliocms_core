@@ -1,0 +1,35 @@
+<% set_title_and_breadcrumb t('user.users') %>
+
+<h1><%= t('user.users') %></h1>
+
+<div class="strap">
+  <%= link_to "#{t('user.add')} &raquo;".html_safe, new_admin_user_path, :class => 'text-icon icon-add' %>
+  <%= link_to "#{t('admin.refresh')} &raquo;".html_safe, admin_users_path, :class => 'text-icon icon-refresh' %>
+  <%= link_to "#{t('admin.back_to_admin')} &raquo;".html_safe, admin_path, :class => 'text-icon icon-backward' %>
+</div>
+
+<table class="admin-table">
+  <thead>
+  <tr>
+    <th><%= t('activerecord.attributes.user.email') %></th>
+    <th><%= t('activerecord.attributes.user.last_sign_in_at') %></th>
+    <th><%= t('admin.actions') %></th>
+  </tr>
+  </thead>
+  <tbody>
+
+  <% for item in @users %>
+      <tr class="<%= cycle("odd-row", "even-row") -%>">
+        <td><%= link_to item.email, edit_admin_user_url(item.id) %></td>
+        <td><%= l(item.last_sign_in_at, :format => :short) if item.last_sign_in_at.is_a?(DateTime) %></td>
+        <td>
+          <%= link_to t('admin.edit'), edit_admin_user_url(item.id), :class => 'icon icon-edit', :title => t('admin.edit') %>
+          <%= link_to t('admin.destroy'), admin_user_url(item.id),
+                      :method => :delete,
+                      :confirm => t('user.destroy_confirmation'),
+                      :class => 'icon icon-destroy',
+                      :title => t('admin.destroy') %>
+        </td>
+  <% end %>
+  </tbody>
+</table>
