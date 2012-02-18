@@ -1,0 +1,2 @@
+module EtabliocmsCore
+end
