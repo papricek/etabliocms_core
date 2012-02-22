@@ -1,16 +1,14 @@
 module EtabliocmsCore
-  module Admin
-    class BaseController < ::ApplicationController
+  class BaseController < ::ApplicationController
 
-      before_filter :authenticate_user!
+    before_filter :authenticate_etabliocms_core_user!
 
-      layout "admin"
+    layout "admin"
 
-      helper "admin/table_tree"
+    helper "admin/table_tree"
 
-      def set_locale
-        I18n.locale = I18n.default_locale
-      end
+    def set_locale
+      I18n.locale = I18n.default_locale
     end
   end
 end
