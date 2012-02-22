@@ -1,13 +1,10 @@
 Rails.application.routes.draw do
 
-  devise_for :"etabliocms_core/users", :path_names => {:sign_in => "login",
-                                                       :sign_out => "logout",
-                                                       :registration => "register",
-                                                       :password => "forgot-password"}
+  devise_for :"etabliocms_core/users"
 
-  devise_scope :user do
-    get "/login" => "devise/sessions#new"
-    delete "/logout" => "devise/sessions#destroy"
+  devise_scope :"etabliocms_core/user" do
+    get "login" => "devise/sessions#new"
+    delete "logout" => "devise/sessions#destroy"
   end
 
   match "/admin", :to => "admin/static#index"
