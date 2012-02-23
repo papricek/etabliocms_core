@@ -46,7 +46,7 @@ module EtabliocmsCore
                     :title => I18n.t('admin.edit')),
             link_to(I18n.t('admin.destroy'), destroy_path(item),
                     :method => :delete,
-                    :confirm => t("#{item.class.to_s.underscore}.destroy_confirmation"),
+                    :confirm => t("#{item.class.to_s.demodulize.underscore}.destroy_confirmation"),
                     :class => 'icon icon-destroy', :title => I18n.t('admin.destroy'))
         ]
         unless item.is_first_of_siblings?(parent)
@@ -74,15 +74,15 @@ module EtabliocmsCore
       end
 
       def edit_path(item)
-        send "edit_admin_#{item.class.to_s.underscore}_path", item.id
+        send "edit_admin_#{item.class.to_s.demodulize.underscore}_path", item.id
       end
 
       def destroy_path(item)
-        send "admin_#{item.class.to_s.underscore}_path", item.id
+        send "admin_#{item.class.to_s.demodulize.underscore}_path", item.id
       end
 
       def move_path(item, method)
-        send "move_admin_#{item.class.to_s.underscore}_path", {:id => item.id, :method => method}
+        send "move_admin_#{item.class.to_s.demodulize.underscore}_path", {:id => item.id, :method => method}
       end
 
     end

@@ -11,7 +11,6 @@ feature 'Users', '' do
     fill_in 'Heslo', :with => '123456'
     click_button('Sign in')
     page.should have_content('Přihlášení proběhlo úspěšně.')
-    save_and_open_page
     click_link('Uživatelé (1)')
     page.should have_content('Uživatelé')
     page.should have_content(user.email)
