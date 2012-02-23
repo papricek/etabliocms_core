@@ -4,7 +4,7 @@ module EtabliocmsCore
 
     initializer "etabliocms_core.initialize" do |app|
       EtabliocmsCore.setup do |config|
-        config.app_root = app.root
+        config.modules = [:core]
       end
     end
 

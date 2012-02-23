@@ -1,4 +1,3 @@
-# This migration comes from etabliocms_core_engine (originally 20122202145113)
 class CreateUsers < ActiveRecord::Migration
 
   def change

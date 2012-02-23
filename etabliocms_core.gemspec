@@ -19,6 +19,7 @@ Gem::Specification.new do |gem|
   gem.add_dependency "rails", "~> 3.2.1"
   gem.add_dependency "devise", "~> 2.0.4"
   gem.add_dependency "configatron"
+  gem.add_dependency "RedCloth", '4.2.9'
 
   gem.add_development_dependency "sqlite3"
 end

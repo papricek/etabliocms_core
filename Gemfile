@@ -1,7 +1,8 @@
 source "http://rubygems.org"
 gemspec
 
-gem "jquery-rails"
+gem 'jquery-rails'
+gem 'RedCloth', :require => 'redcloth'
 
 group :development do
   gem 'rspec'
