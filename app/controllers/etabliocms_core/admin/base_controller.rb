@@ -7,8 +7,5 @@ module EtabliocmsCore
 
     helper "admin/table_tree"
 
-    def set_locale
-      I18n.locale = I18n.default_locale
-    end
   end
 end

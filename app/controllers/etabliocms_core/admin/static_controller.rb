@@ -3,7 +3,6 @@ module EtabliocmsCore
     class StaticController < BaseController
 
       def index
-
       end
 
       def textile_parser

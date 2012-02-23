@@ -1,6 +1,6 @@
 module EtabliocmsCore
   module Admin
-    class UsersController < Admin::BaseController
+    class UsersController < BaseController
 
       def index
         @users = User.all
@@ -32,7 +32,6 @@ module EtabliocmsCore
         else
           render :action => 'edit'
         end
-
       end
 
       def destroy
