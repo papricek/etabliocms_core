@@ -1,6 +1,6 @@
 module EtabliocmsCore
 
-  class Engine < Rails::Engine
+  class Engine < ::Rails::Engine
 
     initializer "etabliocms_core.initialize" do |app|
       EtabliocmsCore.setup do |config|
@@ -21,6 +21,8 @@ module EtabliocmsCore
         include EtabliocmsCore::ApplicationControllerExtension
       end
     end
+
+
 
   end
 
