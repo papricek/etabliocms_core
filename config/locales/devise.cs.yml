@@ -34,9 +34,11 @@ cs:
       confirmed: "Váš účet byl úspěšně potvrzen. Byli jste přihlášeni."
     registrations:
       signed_up: "Vítejte! Vaše registrace byla úspěšná."
-      inactive_signed_up: "Vaše registrace byla úspěšná. Bohužel jsme Vás ale nemohli přihlásit, protože:  %{reason}."
       updated: "Aktualizace Vašeho účtu proběhla úspěšně."
       destroyed: "Váš účet byl úspěšně zrušen. Na shledanou!"
+      signed_up_but_unconfirmed: "Během několika minut obdržíte email s potvrzovacím odkazem. Klikněte prosím na tento odkaz pro potvrzení účtu."
+      signed_up_but_inactive: "Vaše registrace proběhla správně. Nyní se ale nemůžete přihlásit, protože Váš účet ještě nebyl potvrzen."
+      signed_up_but_locked: "Vaše registrace proběhla správně. Nyní se ale nemůžete přihlásit, protože Váš účet ještě byl zablokován."
     unlocks:
       send_instructions: "Během několika minut obdržíte email s návodem, jak odemknout Váš účet."
       unlocked: "Váš účet byl úspěšně odemknut. Byli jste přihlášeni."
