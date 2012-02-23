@@ -1,0 +1,38 @@
+cs:
+  common:
+    logout: Odhlásit
+    logged: Přihlášen
+    login: Přihlásit
+    more: Více
+    error_explanation: "Vámi zadaná data nejsou ve správném formátu:"
+    obligatory_fields: Povinné položky jsou označeny hvězdičkou.
+    send: Odeslat
+    close: Zavřít
+  admin:
+    admin: Administrační rozhraní
+    destroy: Odstranit
+    edit: Editovat
+    save: Uložit
+    refresh: Obnovit
+    back_to_admin: Zpět do administrace
+    created_at: Vytvořeno
+    actions: Akce
+  user:
+    users: Uživatelé
+    users_count: "Uživatelé (%{count})"
+    add: Přidat uživatele
+    created: Uživatel byl úspěšně vytvořen.
+    updated: Uživatel byl úspěšně upraven.
+    destroyed: Uživatel byl úspěšně odstraněn.
+    destroy_confirmation: Skutečně chcete smazat tohoto uživatele?
+    admin_legend: Základní údaje o uživateli
+    edit: "Editace uživatele %{title}"
+    new: Nový uživatel
+  activerecord:
+    attributes:
+      user:
+        email: Email
+        password: Heslo
+        password_confirmation: Potvrzení hesla
+        last_sign_in_at: Poslední přihlášení
+        remember_me: Trvalé přihlášení

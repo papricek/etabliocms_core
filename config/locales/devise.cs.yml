@@ -1,0 +1,53 @@
+# Additional translations at http://github.com/plataformatec/devise/wiki/I18n
+
+cs:
+  errors:
+    messages:
+      expired: "vypršelo, zkuste se přihlásit znovu"
+      not_found: "nenalezeno"
+      already_confirmed: "je potvrzen, zkuste se přihlásit"
+      not_locked: "nebyl zamčen"
+      not_saved:
+        one: "Uložení tohoto účtu brání 1 chyba:"
+        other: "Uložení tohoto účtu brání %{count} chyb:"
+
+  devise:
+    failure:
+      already_authenticated: "Jste už přihlášen."
+      unauthenticated: "Pro pokračování se musíte přihlásit nebo zaregistrovat."
+      unconfirmed: "Pro pokračování musíte potvrdit Váš účet."
+      locked: "Váš účet je uzamčen."
+      invalid: "Neplatný email nebo heslo."
+      invalid_token: "Neplatný autentizační kód."
+      timeout: "Vaše přihlášení vypršelo, pro pokračování se znovu přihlašte."
+      inactive: "Váš účet ještě nebyl aktivován."
+    sessions:
+      signed_in: "Přihlášení proběhlo úspěšně."
+      signed_out: "Odhlášení proběhlo úspěšně."
+    passwords:
+      send_instructions: "Během několika minut obdržíte email s návodem, jak znovuobnovit Vaše heslo."
+      updated: "Vaše heslo bylo úspěšně změněno. Nyní se můžete přihlásit."
+      send_paranoid_instructions: "Pokud máme tento Váš email v databázi, obdržíte zanedlouho email s odkazem pro obnovení hesla."
+    confirmations:
+      send_instructions: "Během několika minut obdržíte email s návodem, jak potvrdit Váš účet."
+      send_paranoid_instructions: "Pokud máme tento Váš email v databázi, obdržíte zanedlouho návod, jak potvrdit Váš účet."
+      confirmed: "Váš účet byl úspěšně potvrzen. Byli jste přihlášeni."
+    registrations:
+      signed_up: "Vítejte! Vaše registrace byla úspěšná."
+      inactive_signed_up: "Vaše registrace byla úspěšná. Bohužel jsme Vás ale nemohli přihlásit, protože:  %{reason}."
+      updated: "Aktualizace Vašeho účtu proběhla úspěšně."
+      destroyed: "Váš účet byl úspěšně zrušen. Na shledanou!"
+    unlocks:
+      send_instructions: "Během několika minut obdržíte email s návodem, jak odemknout Váš účet."
+      unlocked: "Váš účet byl úspěšně odemknut. Byli jste přihlášeni."
+      send_paranoid_instructions: "Pokud Váš účet skutečně existuje, zanedlouho obdržíte email s návodem, jak odemknout tento Váš účet."
+    omniauth_callbacks:
+      success: "Byli jste úspěšně přihlášení pomocí účtu na službě %{kind}."
+      failure: "Nemohli jste být přihlášení pomocí účtu na službě %{kind}, protože: %{reason}."
+    mailer:
+      confirmation_instructions:
+        subject: "Potvrzení účtu"
+      reset_password_instructions:
+        subject: "Znovunastavení hesla"
+      unlock_instructions:
+        subject: "Odemknutí účtu"
