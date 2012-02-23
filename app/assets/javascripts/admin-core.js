@@ -1,6 +1,5 @@
 //= require jquery
 //= require jquery_ujs
-//= require_tree ../../../vendor/assets/javascripts/
 //= require ../../../vendor/assets/javascripts/markitup/jquery.markitup.pack
 //= require ../../../vendor/assets/javascripts/markitup/sets/textile/set
 //= require_self
@@ -16,4 +15,5 @@ var Admin = function() {
             })
         }
     }
+
 }();
