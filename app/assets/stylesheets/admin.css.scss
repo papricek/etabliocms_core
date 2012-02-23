@@ -50,6 +50,8 @@ header#topbar { color: white; font-weight: bold; background: $background_dark; p
     }
 }
 
+
+
 /* MAIN */
 #main { border: 2px solid white; background:#f3fcff image_url('admin/background-main.gif') repeat-x; overflow: hidden; padding-bottom: 40px;
     #content { padding: 0 20px; width: 700px; float: left;
@@ -112,6 +114,8 @@ header#topbar { color: white; font-weight: bold; background: $background_dark; p
     }
 }
 
+
+
 /* FORM */
 fieldset { border:0; clear:both;
     p {clear:both; margin: 10px 0 20px 0; }
@@ -144,6 +148,8 @@ fieldset { border:0; clear:both;
     .tagsinput { margin: 10px 0 0 90px; width: 300px; }
 }
 
+
+
 /* TABLES */
 table {
     th { padding: 7px 5px; }
@@ -156,11 +162,6 @@ table {
     }
 }
 
-/* PAGINATION */
-.pagination { text-align: right; width: 700px; margin: 10px 0px 15px 0; padding-right: 10px;
-
-
-}
 
 
 /* OTHER */
@@ -175,7 +176,7 @@ table {
     }
 }
 
-.pagination { overflow: hidden; text-align: center;
+.pagination { width: 700px; margin: 10px 0px 15px 0; padding-right: 10px; overflow: hidden; text-align: center;
     .next, .prev { background: white;  padding: 5px;
             a { color: grey;
                 &:hover { text-decoration: none; }
@@ -184,3 +185,5 @@ table {
     .next { float: right; }
     .prev { float: left; }
 }
+
+#errorExplanation { margin: 0 0 20px 0;}

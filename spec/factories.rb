@@ -9,8 +9,8 @@ FactoryGirl.define do
 
   factory :user, :class => 'EtabliocmsCore::User' do
     email
-    password "secret"
-    password_confirmation "secret"
+    password "123456"
+    password_confirmation "123456"
   end
 
 end
