@@ -17,9 +17,7 @@
   <%= csrf_meta_tags %>
 </head>
 
-
 <body class="<%= body_class %>">
-
 <header id="topbar">
   <div class="container">
     <nav id="user-information">
@@ -49,12 +47,11 @@
       <div id="sidebar-inner">
         <div id="sidebar-inner-inner">
 
-          <h3><%= image_tag asset_path("admin/sidebar-users.png"), :alt => t('user.users') %><%= t('user.users') %></h3>
+          <h3><%= image_tag asset_path("admin/sidebar-users.png"), :alt => t('etabliocms_core_user.users') %><%= t('etabliocms_core_user.users') %></h3>
           <ul>
-            <li><%= link_to_unless_current I18n.t('user.users_count', :count => EtabliocmsCore::User.count), admin_users_path %></li>
-            <li><%= link_to_unless_current t('user.add'), new_admin_user_path %></li>
+            <li><%= link_to_unless_current I18n.t('etabliocms_core_user.users_count', :count => EtabliocmsCore::User.count), admin_users_path %></li>
+            <li><%= link_to_unless_current t('etabliocms_core_user.add'), new_admin_user_path %></li>
           </ul>
-
 
         </div>
       </div>

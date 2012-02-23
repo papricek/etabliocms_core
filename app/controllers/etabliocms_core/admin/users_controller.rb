@@ -11,9 +11,9 @@ module EtabliocmsCore
       end
 
       def create
-        @user = User.new(params[:user])
+        @user = User.new(params[:etabliocms_core_user])
         if @user.save
-          flash[:notice] = t('user.created')
+          flash[:notice] = t('etabliocms_core_user.created')
           redirect_to :action => 'index'
         else
           render :action => 'new'
@@ -26,8 +26,12 @@ module EtabliocmsCore
 
       def update
         @user = User.find(params[:id])
-        if @user.update_attributes(params[:user])
-          flash[:notice] = t('user.updated')
+        if params[:etabliocms_core_user][:password].blank? and params[:etabliocms_core_user][:password_confirmation].blank?
+          params[:etabliocms_core_user].delete(:password)
+          params[:etabliocms_core_user].delete(:password_confirmation)
+        end
+        if @user.update_attributes(params[:etabliocms_core_user])
+          flash[:notice] = t('etabliocms_core_user.updated')
           redirect_to :action => 'index'
         else
           render :action => 'edit'
@@ -36,7 +40,7 @@ module EtabliocmsCore
 
       def destroy
         User.find(params[:id]).destroy
-        flash[:notice] = t('user.destroyed')
+        flash[:notice] = t('etabliocms_core_user.destroyed')
         redirect_to :action => 'index'
       end
 

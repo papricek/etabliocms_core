@@ -17,7 +17,7 @@ cs:
     back_to_admin: Zpět do administrace
     created_at: Vytvořeno
     actions: Akce
-  user:
+  etabliocms_core_user:
     users: Uživatelé
     users_count: "Uživatelé (%{count})"
     add: Přidat uživatele
@@ -30,7 +30,7 @@ cs:
     new: Nový uživatel
   activerecord:
     attributes:
-      user:
+      "etabliocms_core/user":
         email: Email
         password: Heslo
         password_confirmation: Potvrzení hesla

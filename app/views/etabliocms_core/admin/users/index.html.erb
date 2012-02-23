@@ -1,9 +1,9 @@
-<% set_title_and_breadcrumb t('user.users') %>
+<% set_title_and_breadcrumb t('etabliocms_core_user.users') %>
 
-<h1><%= t('user.users') %></h1>
+<h1><%= t('etabliocms_core_user.users') %></h1>
 
 <div class="strap">
-  <%= link_to "#{t('user.add')} &raquo;".html_safe, new_admin_user_path, :class => 'text-icon icon-add' %>
+  <%= link_to "#{t('etabliocms_core_user.add')} &raquo;".html_safe, new_admin_user_path, :class => 'text-icon icon-add' %>
   <%= link_to "#{t('admin.refresh')} &raquo;".html_safe, admin_users_path, :class => 'text-icon icon-refresh' %>
   <%= link_to "#{t('admin.back_to_admin')} &raquo;".html_safe, admin_path, :class => 'text-icon icon-backward' %>
 </div>
@@ -11,8 +11,8 @@
 <table class="admin-table">
   <thead>
   <tr>
-    <th><%= t('activerecord.attributes.user.email') %></th>
-    <th><%= t('activerecord.attributes.user.last_sign_in_at') %></th>
+    <th><%= t('activerecord.attributes.etabliocms_core_user.email') %></th>
+    <th><%= t('activerecord.attributes.etabliocms_core_user.last_sign_in_at') %></th>
     <th><%= t('admin.actions') %></th>
   </tr>
   </thead>
@@ -26,7 +26,7 @@
           <%= link_to t('admin.edit'), edit_admin_user_url(item.id), :class => 'icon icon-edit', :title => t('admin.edit') %>
           <%= link_to t('admin.destroy'), admin_user_url(item.id),
                       :method => :delete,
-                      :confirm => t('user.destroy_confirmation'),
+                      :confirm => t('etabliocms_core_user.destroy_confirmation'),
                       :class => 'icon icon-destroy',
                       :title => t('admin.destroy') %>
         </td>
