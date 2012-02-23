@@ -6,7 +6,7 @@ module EtabliocmsCore
 
       layout "admin"
 
-      #helper "admin/table_tree"
+      helper "etabliocms_core/admin/table_tree"
 
     end
   end
