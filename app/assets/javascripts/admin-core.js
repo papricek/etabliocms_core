@@ -2,18 +2,5 @@
 //= require jquery_ujs
 //= require ../../../vendor/assets/javascripts/markitup/jquery.markitup.pack
 //= require ../../../vendor/assets/javascripts/markitup/sets/textile/set
-//= require_self
+//= require admin
 //= require shared
-
-var Admin = function() {
-
-    return {
-        initPopUp : function() {
-            $('a[data-popup=true]').click(function(e) {
-                e.preventDefault();
-                window.open($(this).attr('href'));
-            })
-        }
-    }
-
-}();
