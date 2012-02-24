@@ -17,6 +17,12 @@ cs:
     back_to_admin: Zpět do administrace
     created_at: Vytvořeno
     actions: Akce
+  hierarchy:
+    up: Nahoru
+    top: Navrch
+    down: Dolů
+    bottom: Dospod
+    top_level: Nejvyšší úroveň
   etabliocms_core_user:
     users: Uživatelé
     users_count: "Uživatelé (%{count})"

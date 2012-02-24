@@ -41,34 +41,34 @@ module EtabliocmsCore
 
       def actions_links(item, parent)
         links = [
-            link_to(I18n.t('admin.edit'), edit_path(item),
+            link_to(I18n.t('hierarchy.edit'), edit_path(item),
                     :class => "icon icon-edit",
-                    :title => I18n.t('admin.edit')),
-            link_to(I18n.t('admin.destroy'), destroy_path(item),
+                    :title => I18n.t('hierarchy.edit')),
+            link_to(I18n.t('hierarchy.destroy'), destroy_path(item),
                     :method => :delete,
                     :confirm => t("#{item.class.to_s.demodulize.underscore}.destroy_confirmation"),
-                    :class => 'icon icon-destroy', :title => I18n.t('admin.destroy'))
+                    :class => 'icon icon-destroy', :title => I18n.t('hierarchy.destroy'))
         ]
         unless item.is_first_of_siblings?(parent)
-          links << link_to(I18n.t('admin.up'), move_path(item, "move_higher"),
+          links << link_to(I18n.t('hierarchy.up'), move_path(item, "move_higher"),
                            :method => :put,
                            :class => "icon icon-up",
-                           :title => I18n.t('admin.up'))
-          links << link_to(I18n.t('admin.top'), move_path(item, "move_to_top"),
+                           :title => I18n.t('hierarchy.up'))
+          links << link_to(I18n.t('hierarchy.top'), move_path(item, "move_to_top"),
                            :method => :put,
                            :class => "icon icon-up-up",
-                           :title => I18n.t('admin.top'))
+                           :title => I18n.t('hierarchy.top'))
         end
 
         unless item.is_last_of_siblings?(parent)
-          links << link_to(I18n.t('admin.down'), move_path(item, "move_lower"),
+          links << link_to(I18n.t('hierarchy.down'), move_path(item, "move_lower"),
                            :method => :put,
                            :class => "icon icon-down",
-                           :title => I18n.t('admin.down'))
-          links << link_to(I18n.t('admin.bottom'), move_path(item, "move_to_bottom"),
+                           :title => I18n.t('hierarchy.down'))
+          links << link_to(I18n.t('hierarchy.bottom'), move_path(item, "move_to_bottom"),
                            :method => :put,
                            :class => "icon icon-down-down",
-                           :title => I18n.t('admin.bottom'))
+                           :title => I18n.t('hierarchy.bottom'))
         end
         links.join("").html_safe
       end
