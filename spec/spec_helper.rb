@@ -2,7 +2,6 @@ ENV["RAILS_ENV"] = "test"
 require File.expand_path("../dummy/config/environment.rb", __FILE__)
 require 'rspec/rails'
 Bundler.require :default, :development
-Faker::Config.locale = :en
 Rails.backtrace_cleaner.remove_silencers!
 
 RSpec.configure do |config|

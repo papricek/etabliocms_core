@@ -16,5 +16,5 @@ group :development do
   gem 'launchy'
   gem 'steak'
   gem 'mocha'
-  gem 'faker'
+  gem 'ffaker'
 end
