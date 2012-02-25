@@ -11,6 +11,7 @@ module EtabliocmsCore
 
     initializer "etabliocms_core.configure_app" do |app|
       app.config.i18n.default_locale = :cs
+      Rails.application.config.assets.precompile += %w( admin-core.js admin-core.css )
     end
 
     initializer "etabliocms_core.load_static_assets" do |app|
