@@ -66,6 +66,7 @@ header#topbar { color: white; font-weight: bold; background: $background_dark; p
                 th, th a { color: $grey_dark; text-transform:uppercase; background: $grey_light; }
             }
             tbody td, thead th { border:1px solid $grey_dark; }
+            th.center, td.center { text-align: center; }
         }
         hr.cleaner { visibility:hidden; clear:both; }
         ul {
