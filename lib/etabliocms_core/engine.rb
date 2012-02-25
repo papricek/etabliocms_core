@@ -17,7 +17,7 @@ module EtabliocmsCore
       app.middleware.use ::ActionDispatch::Static, "#{root}/public"
     end
 
-    initializer 'etabliocms_core.controller' do |app|
+    initializer 'etabliocms_core.application_controller' do |app|
       ActiveSupport.on_load(:action_controller) do
         include EtabliocmsCore::ApplicationControllerExtension
       end

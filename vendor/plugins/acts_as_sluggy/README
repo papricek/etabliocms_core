@@ -1,0 +1,4 @@
+acts_as_sluggy
+============
+
+  Actualizes slug in before_save and adds to_param.

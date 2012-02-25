@@ -12,4 +12,3 @@ end
 
 require "etabliocms_core/engine"
 require "devise"
-
