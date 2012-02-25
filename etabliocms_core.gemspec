@@ -13,7 +13,7 @@ Gem::Specification.new do |gem|
   gem.summary     = "Small CMS"
   gem.description = "Small CMS"
 
-  gem.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
+  gem.files = Dir["{app,config,db,lib,public,vendor}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   gem.test_files = Dir["test/**/*"]
 
   gem.add_dependency "rails", "~> 3.2.1"
