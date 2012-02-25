@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    etabliocms_core (0.0.1)
+    etabliocms_core (0.0.2)
       RedCloth (= 4.2.9)
       configatron
       devise (~> 2.0.4)
