@@ -17,6 +17,10 @@ cs:
     back_to_admin: Zpět do administrace
     created_at: Vytvořeno
     actions: Akce
+    locales:
+      cs: Česky
+      en: Anglicky
+      de: Německy
   hierarchy:
     up: Nahoru
     top: Navrch
