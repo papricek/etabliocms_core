@@ -1,10 +1,11 @@
 PATH
   remote: .
   specs:
-    etabliocms_core (0.0.2)
+    etabliocms_core (0.0.3)
       RedCloth (= 4.2.9)
       configatron
       devise (~> 2.0.4)
+      jquery-rails
       rails (~> 3.2.1)
 
 GEM
@@ -164,7 +165,9 @@ DEPENDENCIES
   RedCloth
   capybara
   capybara-webkit
+  configatron
   database_cleaner
+  devise (~> 2.0.4)
   etabliocms_core!
   factory_girl_rails (= 1.5.0)
   ffaker

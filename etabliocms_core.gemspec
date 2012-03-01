@@ -17,6 +17,7 @@ Gem::Specification.new do |gem|
   gem.test_files = Dir["test/**/*"]
 
   gem.add_dependency "rails", "~> 3.2.1"
+  gem.add_dependency "jquery-rails"
   gem.add_dependency "devise", "~> 2.0.4"
   gem.add_dependency "configatron"
   gem.add_dependency "RedCloth", '4.2.9'

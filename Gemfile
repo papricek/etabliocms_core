@@ -2,9 +2,11 @@ source "http://rubygems.org"
 gemspec
 
 gem 'jquery-rails'
+gem 'devise', '~> 2.0.4'
+gem 'configatron'
 gem 'RedCloth', :require => 'redcloth'
 
-group :development do
+group :test do
   gem 'rspec'
   gem 'rspec-rails'
   gem 'shoulda-matchers'

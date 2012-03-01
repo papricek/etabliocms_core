@@ -1,3 +1,8 @@
+require 'devise'
+require 'configatron'
+require 'redcloth'
+require 'jquery-rails'
+
 module EtabliocmsCore
 
   class Engine < ::Rails::Engine
@@ -23,7 +28,6 @@ module EtabliocmsCore
         include EtabliocmsCore::ApplicationControllerExtension
       end
     end
-
 
   end
 
