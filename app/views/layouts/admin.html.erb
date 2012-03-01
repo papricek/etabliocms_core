@@ -25,6 +25,7 @@
       <% if etabliocms_core_user_signed_in? -%>
           <strong><%= t('common.logged') %>: <%= link_to current_etabliocms_core_user.email, admin_path %></strong>
           <ul>
+            <li><%= link_to t('admin.show_public', :domain => request.host), "/", :'data-popup' => true %></li>
             <li><%= link_to t('common.logout'), destroy_etabliocms_core_user_session_path, {:title => t('common.logout'), :method => :delete} %></li>
           </ul>
       <% end -%>
