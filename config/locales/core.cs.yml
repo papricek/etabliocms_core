@@ -17,6 +17,7 @@ cs:
     back_to_admin: Zpět do administrace
     created_at: Vytvořeno
     actions: Akce
+    show_public: "Ukázat %{domain}"
     locales:
       cs: Česky
       en: Anglicky
