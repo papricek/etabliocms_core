@@ -1,8 +1,6 @@
 module EtabliocmsCore::OutputHelper
 
-  def html_out(obj, method = "text", options = {})
-    return "" if obj.nil?
-    string = obj.send(method)
+  def html_out(string = "", options = {})
     string = RedCloth.new(string.to_s)
     string = string.to_html(:textile, :tags)
     string = truncate_and_strip_tags(string, options[:words].to_i) if options[:words]

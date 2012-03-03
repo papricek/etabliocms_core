@@ -31,9 +31,9 @@ module EtabliocmsCore
 
       def item_html(item, stack)
         html = [
-            link_to(item.title, edit_path(item), :style => "padding-left:#{stack.size*10}px"),
+            link_to(item.titles, edit_path(item), :style => "padding-left:#{stack.size*10}px"),
             content_tag(:span, I18n.l(item.created_at, :format => :short), :class => "centered"),
-            content_tag(:span, item.locale, :class => 'centered'),
+            content_tag(:span, item.locales, :class => 'centered'),
             actions_links(item, stack.last)
         ].inject("") { |line, cell_content| line + content_tag(:td, cell_content) }
         content_tag(:tr, html.html_safe)
