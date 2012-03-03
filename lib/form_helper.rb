@@ -7,8 +7,8 @@ module ActionView
 
       def boolean_yes_no_select(object_name, method, options = {}, html_options = {})
         choices = [
-                ['Ano', true],
-		['Ne', false],
+          ['Ano', true],
+          ['Ne', false],
         ]
         InstanceTag.new(object_name, method, self, options.delete(:object)).to_select_tag(choices, options, html_options)
       end
