@@ -6,10 +6,10 @@ module ActionView
       DEFAULT_TEXTAREA_HEIGHT = 200
 
       def boolean_yes_no_select(object_name, method, options = {}, html_options = {})
-        choices = {
-                'Ne' => false,
-                'Ano' => true
-        }
+        choices = [
+                ['Ano', true],
+		['Ne', false],
+        ]
         InstanceTag.new(object_name, method, self, options.delete(:object)).to_select_tag(choices, options, html_options)
       end
 
