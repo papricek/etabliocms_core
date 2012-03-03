@@ -30,24 +30,29 @@ module EtabliocmsCore
       end
 
       def item_html(item, stack)
+        title, locale = if defined?(Page) && item.is_a?(Page)
+                          [item.titles, item.locales]
+                        else
+                          [item.title, item.locale]
+                        end
         html = [
-            link_to(item.titles, edit_path(item), :style => "padding-left:#{stack.size*10}px"),
-            content_tag(:span, I18n.l(item.created_at, :format => :short), :class => "centered"),
-            content_tag(:span, item.locales, :class => 'centered'),
-            actions_links(item, stack.last)
+          link_to(title, edit_path(item), :style => "padding-left:#{stack.size*10}px"),
+          content_tag(:span, I18n.l(item.created_at, :format => :short), :class => "centered"),
+          content_tag(:span, locale, :class => 'centered'),
+          actions_links(item, stack.last)
         ].inject("") { |line, cell_content| line + content_tag(:td, cell_content) }
         content_tag(:tr, html.html_safe)
       end
 
       def actions_links(item, parent)
         links = [
-            link_to(I18n.t('admin.edit'), edit_path(item),
-                    :class => "icon icon-edit",
-                    :title => I18n.t('admin.edit')),
-            link_to(I18n.t('admin.destroy'), destroy_path(item),
-                    :method => :delete,
-                    :confirm => t("#{item.class.to_s.demodulize.underscore}.destroy_confirmation"),
-                    :class => 'icon icon-destroy', :title => I18n.t('admin.destroy'))
+          link_to(I18n.t('admin.edit'), edit_path(item),
+                  :class => "icon icon-edit",
+                  :title => I18n.t('admin.edit')),
+          link_to(I18n.t('admin.destroy'), destroy_path(item),
+                  :method => :delete,
+                  :confirm => t("#{item.class.to_s.demodulize.underscore}.destroy_confirmation"),
+                  :class => 'icon icon-destroy', :title => I18n.t('admin.destroy'))
         ]
         unless item.is_first_of_siblings?(parent)
           links << link_to(I18n.t('hierarchy.up'), move_path(item, "move_higher"),
