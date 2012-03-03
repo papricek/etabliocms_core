@@ -2,6 +2,7 @@ require 'devise'
 require 'configatron'
 require 'redcloth'
 require 'jquery-rails'
+require 'jquery-ui-rails'
 
 module EtabliocmsCore
 

@@ -2,6 +2,7 @@ source "http://rubygems.org"
 gemspec
 
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 gem 'devise', '~> 2.0.4'
 gem 'configatron'
 gem 'RedCloth', :require => 'redcloth'
