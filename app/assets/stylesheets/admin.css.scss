@@ -120,7 +120,7 @@ header#topbar { color: white; font-weight: bold; background: $background_dark; p
 /* FORM */
 fieldset { border:0; clear:both;
     p {clear:both; margin: 10px 0 20px 0; }
-    legend { font-size:1.5em; font-weight:normal; }
+    legend { font-size:1.5em; font-weight:normal; margin-bottom: 10px; }
     label {color: $grey; width: 80px; padding-right:10px; display:block; float:left; text-align:right; margin-top: 3px }
     select { margin:0; }
     textarea { width: 500px;
