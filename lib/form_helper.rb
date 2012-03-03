@@ -14,12 +14,12 @@ module ActionView
       end
 
       def textile_text_area(object_name, method, options = {})
-        obj = self.instance_variable_get("@#{object_name}")
         html = InstanceTag.new(object_name, method, self, options.delete(:object)).to_text_area_tag(options)
+        id = options[:id] || "#{object_name}_#{method}"
         html << javascript_tag do
           %Q(
                   $(function() {
-                      $('##{object_name}_#{method}').markItUp(mySettings);
+                      $('##{id}').markItUp(mySettings);
                   });
               )
         end
