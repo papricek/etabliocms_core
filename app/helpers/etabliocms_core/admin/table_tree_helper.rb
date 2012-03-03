@@ -41,13 +41,13 @@ module EtabliocmsCore
 
       def actions_links(item, parent)
         links = [
-            link_to(I18n.t('hierarchy.edit'), edit_path(item),
+            link_to(I18n.t('admin.edit'), edit_path(item),
                     :class => "icon icon-edit",
-                    :title => I18n.t('hierarchy.edit')),
-            link_to(I18n.t('hierarchy.destroy'), destroy_path(item),
+                    :title => I18n.t('admin.edit')),
+            link_to(I18n.t('admin.destroy'), destroy_path(item),
                     :method => :delete,
                     :confirm => t("#{item.class.to_s.demodulize.underscore}.destroy_confirmation"),
-                    :class => 'icon icon-destroy', :title => I18n.t('hierarchy.destroy'))
+                    :class => 'icon icon-destroy', :title => I18n.t('admin.destroy'))
         ]
         unless item.is_first_of_siblings?(parent)
           links << link_to(I18n.t('hierarchy.up'), move_path(item, "move_higher"),
