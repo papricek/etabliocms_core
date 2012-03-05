@@ -30,7 +30,7 @@ module EtabliocmsCore
       end
 
       def item_html(item, stack)
-        title, locale = if defined?(Page) && item.is_a?(Page)
+        title, locale = if defined?(EtabliocmsPages::Page) && item.is_a?(EtabliocmsPages::Page)
                           [item.titles, item.locales]
                         else
                           [item.title, item.locale]
