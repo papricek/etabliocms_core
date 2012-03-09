@@ -52,6 +52,11 @@
               <%= render :partial => "layouts/sidebar_#{m}" %>
           <% end %>
 
+          <h3><%= image_tag asset_path("admin/sidebar-help.png"), :alt => t('help.help') %><%= t('help.help') %></h3>
+          <ul>
+            <li><%= link_to_unless_current I18n.t('help.textile'), admin_textile_help_path %></li>
+          </ul>
+
         </div>
       </div>
     </nav>

@@ -9,6 +9,10 @@ module EtabliocmsCore
         render :text => ::RedCloth.new(params[:data]).to_html
       end
 
+      def textile_help
+        require 'lorem'
+      end
+
     end
   end
 end

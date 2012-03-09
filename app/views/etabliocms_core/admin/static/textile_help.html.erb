@@ -1,0 +1,97 @@
+<% set_title_and_breadcrumb "Nápověda k syntaxi Textile" %>
+
+<h1>Textile</h1>
+<p>Textile je značkovací jazyk, umožňující zapisovat HTML v textové formě, bez HTML značek.</p> <br>
+
+<table id="textile-help">
+  <thead>
+  <tr class="dark-row">
+    <th>Název</th>
+    <th>Jak se zapisuje</th>
+    <th>Jak vypadá</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <th>Nadpis</th>
+    <td>h2. Nadpis</td>
+    <td><%= raw textilize("h2. Nadpis") %></td>
+  </tr>
+  <tr>
+    <th>Menší nadpis</th>
+    <td>h3. Nadpis</td>
+    <td><%= raw textilize("h3. Menší nadpis") %></td>
+  </tr>
+  <tr>
+    <th>Kurzíva</th>
+    <td>Lorem _ipsum dolor_ sit amet.</td>
+    <td><%= raw textilize("Lorem _ipsum dolor_ sit amet.") %></td>
+  </tr>
+  <tr>
+    <th>Tučné</th>
+    <td>Lorem *ipsum dolor* sit amet.</td>
+    <td><%= raw textilize("Lorem *ipsum dolor* sit amet.") %></td>
+  </tr>
+  <tr>
+    <th>Položka číselného seznamu</th>
+    <td># Lorem ipsum dolor sit amet.</td>
+    <td><%= raw textilize("# Lorem ipsum dolor sit amet.") %></td>
+  </tr>
+  <tr>
+    <th>Položka odrážkového seznamu</th>
+    <td>* Lorem ipsum dolor sit amet.</td>
+    <td><%= raw textilize("* Lorem ipsum dolor sit amet.") %></td>
+  </tr>
+  <tr>
+    <th>Odkaz</th>
+    <td>"Text odkazu":http://www.seznam.cz</td>
+    <td><%= raw textilize("\"Text odkazu\":http://www.seznam.cz") %></td>
+  </tr>
+  <tr>
+    <th>Odkaz v textu</th>
+    <td>Lorem "ipsum dolor":http://www.seznam.cz sit amet.</td>
+    <td><%= raw textilize("Lorem \"ipsum dolor\":http://www.seznam.cz sit amet.") %></td>
+  </tr>
+  <tr>
+    <th>Odkaz v textu s&nbsp;bublinkou</th>
+    <td>Lorem "ipsum dolor"(Text bublinky):http://www.seznam.cz sit amet.</td>
+    <td><%= raw textilize("Lorem \"ipsum dolor(Text bublinky)\":http://www.seznam.cz sit amet.") %></td>
+  </tr>
+  <tr>
+    <th>Obrázek s&nbsp;popiskem</th>
+    <td>!<%= "http://#{request.host}/files/textile.jpg" %>(Popisek obrázku)!</td>
+    <td><%= raw textilize("!#{image_path("admin/textile.jpg")}(Popisek obrázku)!") %></td>
+  </tr>
+  <tr>
+    <th>Obrázek s&nbsp;popiskem a&nbsp;odkazem</th>
+    <td>!<%= raw "http://#{configatron.host}/files/textile.jpg" %>(Popisek
+      obrázku)!:http://www.seznam.cz
+    </td>
+    <td><%= raw textilize("!#{image_path("admin/textile.jpg")}(Popisek obrázku)!:http://www.seznam.cz") %></td>
+  </tr>
+
+  </tbody>
+
+</table>
+
+
+<p>
+  Podrobnější informace naleznete například na oficiálních
+  stránkách <%= link_to "Textile", "http://www.textism.com/tools/textile/" %>
+  nebo na stránkách <%= link_to "RedCloth", "http://redcloth.org/textile" %>.
+</p>
+
+<% content_for :javascript do %>
+    <%= javascript_include_tag "jquery.colorbox-min" %>
+
+    <script type="text/javascript">
+        var opts = {
+            current: "{current} z {total}",
+            previous: "předchozí",
+            next: "další",
+            close: "zavřít"
+        };
+        $("a[rel=text-gallery]").colorbox(opts);
+    </script>
+<% end %>
+

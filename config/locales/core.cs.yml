@@ -39,6 +39,9 @@ cs:
     admin_legend: Základní údaje o uživateli
     edit: "Editace uživatele %{title}"
     new: Nový uživatel
+  help:
+    help: Nápověda
+    textile: Textile
   activerecord:
     attributes:
       "etabliocms_core/user":
