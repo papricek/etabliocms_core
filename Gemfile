@@ -6,6 +6,7 @@ gem 'jquery-ui-rails'
 gem 'devise', '~> 2.0.4'
 gem 'configatron'
 gem 'RedCloth', :require => 'redcloth'
+gem 'acts_as_sluggy'
 
 group :test do
   gem 'rspec'
