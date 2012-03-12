@@ -7,6 +7,8 @@ gem 'devise', '~> 2.0.4'
 gem 'configatron'
 gem 'RedCloth', :require => 'redcloth'
 gem 'acts_as_sluggy'
+gem 'extended_nested_set'
+gem 'textile_extension_pack', '0.0.2'
 
 group :test do
   gem 'rspec'
