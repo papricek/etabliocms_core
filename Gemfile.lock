@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    etabliocms_core (0.0.7)
+    etabliocms_core (0.0.8)
       RedCloth (= 4.2.9)
       acts_as_sluggy
       configatron

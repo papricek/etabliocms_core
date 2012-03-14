@@ -127,6 +127,10 @@ fieldset { border:0; clear:both;
         &.small-text-area { height:50px; }
     }
     .submit { float:right; margin-right:3px; }
+    .submit-box { width: 750px; text-align: right; margin-top: 15px;
+        .submit { float: none;}
+        span.or { padding: 0 10px; font-style: italic; }
+    }
     .checkbox label {width:160px; }
     .multiple-select { height:5em; }
     input {

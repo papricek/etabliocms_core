@@ -13,6 +13,8 @@ cs:
     destroy: Odstranit
     edit: Editovat
     save: Uložit
+    save_and_continue: Uložit a pokračovat
+    or: nebo
     refresh: Obnovit
     back_to_admin: Zpět do administrace
     created_at: Vytvořeno
