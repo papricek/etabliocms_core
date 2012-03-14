@@ -9,6 +9,7 @@ PATH
       extended_nested_set
       jquery-rails
       jquery-ui-rails
+      paper_trail
       rails (~> 3.2.1)
       textile_extension_pack
 
@@ -104,6 +105,8 @@ GEM
     multi_json (1.0.4)
     nokogiri (1.5.0)
     orm_adapter (0.0.6)
+    paper_trail (2.6.2)
+      rails (~> 3)
     polyglot (0.3.3)
     rack (1.4.1)
     rack-cache (1.1)
@@ -191,6 +194,7 @@ DEPENDENCIES
   jquery-ui-rails
   launchy
   mocha
+  paper_trail
   rspec
   rspec-rails
   shoulda-matchers

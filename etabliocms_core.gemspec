@@ -22,6 +22,7 @@ Gem::Specification.new do |gem|
   gem.add_dependency "devise", "~> 2.0.4"
   gem.add_dependency "configatron"
   gem.add_dependency "RedCloth", '4.2.9'
+  gem.add_dependency "paper_trail"
   gem.add_dependency "acts_as_sluggy"
   gem.add_dependency "extended_nested_set"
   gem.add_dependency "textile_extension_pack"

@@ -5,5 +5,7 @@ module EtabliocmsCore
 
     attr_accessible :email, :password, :password_confirmation, :remember_me
 
+    has_paper_trail
+
   end
 end
