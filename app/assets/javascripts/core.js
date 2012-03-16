@@ -10,7 +10,7 @@ var Admin = function() {
 
         hideAndDestroyFields : function(self) {
             var $self = $(self);
-            $self.closest(".field   ").hide().
+            $self.closest(".fields").hide().
                 find("input[type=hidden]").val("1");
         },
 
