@@ -3,7 +3,7 @@
  *= require jquery.ui.all
  *= require ../../../vendor/assets/javascripts/markitup/skins/simple/style
  *= require ../../../vendor/assets/javascripts/markitup/sets/textile/style
- *= require admin
+ *= require core
  *= require shared
 */
 

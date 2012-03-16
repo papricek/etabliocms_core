@@ -7,6 +7,7 @@ module EtabliocmsCore
       layout "admin"
 
       helper "etabliocms_core/admin/table_tree"
+      helper "etabliocms_core/admin/nested_fields"
 
     end
   end
