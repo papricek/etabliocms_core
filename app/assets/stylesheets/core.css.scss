@@ -200,6 +200,9 @@ table {
 
 .nested-fields-table { border-collapse: collapse; margin: 10px 0 20px 0;
     th { font-weight: bold; text-align:center; }
-    tbody td { padding:4px 2px; border:0; }
-
+    tbody td { padding:4px 2px; border:0;
+        &.thumbnail{ text-align: center;
+            img { max-height: 25px;  }
+        }
+    }
 }
