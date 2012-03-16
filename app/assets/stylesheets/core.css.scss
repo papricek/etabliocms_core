@@ -163,7 +163,7 @@ table {
     &.admin-table { border-collapse: collapse;
         td { padding: 3px; border: 1px solid $grey_dark; }
     }
-    .centered { text-align: center; display: block; }
+    .centered { text-align: center;  }
     .thumbnail { max-width: 250px; overflow: hidden;
         img { max-width: 240px; }
     }
@@ -202,7 +202,10 @@ table {
     th { font-weight: bold; text-align:center; }
     tbody td { padding:4px 2px; border:0;
         &.thumbnail{ text-align: center;
-            img { max-height: 25px;  }
+            img { max-height: 35px;  }
         }
+    }
+    tr.fields { line-height: 15px;
+        td { vertical-align: middle; }
     }
 }
