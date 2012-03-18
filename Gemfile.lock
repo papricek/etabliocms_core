@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    etabliocms_core (0.0.8)
+    etabliocms_core (0.0.10)
       RedCloth (= 4.2.9)
       acts_as_sluggy
       configatron
@@ -9,6 +9,7 @@ PATH
       extended_nested_set
       jquery-rails
       jquery-ui-rails
+      lorem
       paper_trail
       rails (~> 3.2.1)
       textile_extension_pack
@@ -94,6 +95,7 @@ GEM
     json (1.6.5)
     launchy (2.0.5)
       addressable (~> 2.2.6)
+    lorem (0.1.2)
     mail (2.4.3)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)

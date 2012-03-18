@@ -7,6 +7,7 @@ require 'acts_as_sluggy'
 require 'extended_nested_set'
 require 'textile_extension_pack'
 require 'paper_trail'
+require 'lorem'
 
 module EtabliocmsCore
 

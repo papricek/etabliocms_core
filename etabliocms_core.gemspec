@@ -26,6 +26,7 @@ Gem::Specification.new do |gem|
   gem.add_dependency "acts_as_sluggy"
   gem.add_dependency "extended_nested_set"
   gem.add_dependency "textile_extension_pack"
+  gem.add_dependency "lorem"
 
   gem.add_development_dependency "sqlite3"
 end
