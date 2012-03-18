@@ -80,18 +80,3 @@
   stránkách <%= link_to "Textile", "http://www.textism.com/tools/textile/" %>
   nebo na stránkách <%= link_to "RedCloth", "http://redcloth.org/textile" %>.
 </p>
-
-<% content_for :javascript do %>
-    <%= javascript_include_tag "jquery.colorbox-min" %>
-
-    <script type="text/javascript">
-        var opts = {
-            current: "{current} z {total}",
-            previous: "předchozí",
-            next: "další",
-            close: "zavřít"
-        };
-        $("a[rel=text-gallery]").colorbox(opts);
-    </script>
-<% end %>
-
