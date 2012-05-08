@@ -16,6 +16,8 @@ module EtabliocmsCore
     initializer "etabliocms_core.initialize" do |app|
       EtabliocmsCore.setup do |config|
         config.modules ||= []
+        config.stylesheets ||= []
+        config.javascripts ||= []
         config.modules << :core
       end
     end

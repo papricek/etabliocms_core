@@ -3,6 +3,8 @@ require "active_support/dependencies"
 module EtabliocmsCore
 
   mattr_accessor :modules
+  mattr_accessor :stylesheets
+  mattr_accessor :javascripts
 
   def self.setup
     yield self

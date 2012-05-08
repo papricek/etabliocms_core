@@ -20,6 +20,14 @@
       <%= javascript_include_tag "admin-pages" %>
   <% end %>
 
+  <% EtabliocmsCore.stylesheets.each do |stylesheet| %>
+      <%= stylesheet_link_tag stylesheet %>
+  <% end %>
+
+  <% EtabliocmsCore.javascripts.each do |javascript| %>
+      <%= javascript_include_tag javascript %>
+  <% end %>
+
   <%= csrf_meta_tags %>
 </head>
 
