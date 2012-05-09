@@ -13,7 +13,7 @@ module EtabliocmsCore
       end
 
       def link_to_remove_fields(name, f)
-        f.hidden_field(:_destroy) + link_to_function(name, "Admin.hideAndDestroyFields(this)")
+        f.hidden_field(:_destroy) + link_to_function(name, "Admin.hideAndDestroyFields(this)", :class => "link-to-destroy-fields")
       end
 
     end
