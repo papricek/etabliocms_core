@@ -1,0 +1,54 @@
+en:
+  common:
+    logout: Odhlásit
+    logged: Přihlášen
+    login: Přihlásit
+    more: Více
+    error_explanation: "Vámi zadaná data nejsou ve správném formátu:"
+    obligatory_fields: Povinné položky jsou označeny hvězdičkou.
+    send: Odeslat
+    close: Zavřít
+  admin:
+    admin: Administrační rozhraní
+    destroy: Odstranit
+    edit: Editovat
+    save: Uložit
+    save_and_continue: Uložit a pokračovat
+    or: nebo
+    refresh: Obnovit
+    back_to_admin: Zpět do administrace
+    created_at: Vytvořeno
+    actions: Akce
+    show_public: "Ukázat %{domain}"
+    locales:
+      cs: Česky
+      en: Anglicky
+      de: Německy
+  hierarchy:
+    up: Nahoru
+    top: Navrch
+    down: Dolů
+    bottom: Dospod
+    top_level: Nejvyšší úroveň
+  etabliocms_core_user:
+    users: Uživatelé
+    users_count: "Uživatelé (%{count})"
+    add: Přidat uživatele
+    created: Uživatel byl úspěšně vytvořen.
+    updated: Uživatel byl úspěšně upraven.
+    destroyed: Uživatel byl úspěšně odstraněn.
+    destroy_confirmation: Skutečně chcete smazat tohoto uživatele?
+    admin_legend: Základní údaje o uživateli
+    edit: "Editace uživatele %{title}"
+    new: Nový uživatel
+  help:
+    help: Nápověda
+    textile: Textile
+  activerecord:
+    attributes:
+      "etabliocms_core/user":
+        email: Email
+        password: Heslo
+        password_confirmation: Potvrzení hesla
+        last_sign_in_at: Poslední přihlášení
+        remember_me: Trvalé přihlášení
